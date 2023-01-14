@@ -4,6 +4,15 @@
 
 h1 {
   font-size: 50px;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.score {
+  text-align: center;
 }
 
 .button {
@@ -33,4 +42,46 @@ h1 {
   display: flex;
   margin: 0 auto;
   width: 500px;
+}
+
+.Cell {
+  height: 100px;
+  width: 100px;
+  background-color: #303030;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.number {
+  color: #FFF;
+  font-size: 35px;
+}
+
+.color-2 {
+  background-color: #50C8FF;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.button:hover {
+  background-color: #50C8FF;
+  color: #303030;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.buttons {
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.color-4 {
+  background-color: green;
 }

@@ -44,7 +44,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div>
       <h1>2048</h1>
       <p>Use buttons or arrow keys to play the game. Press 'N' to start a new game</p>
       <div className="button">New Game</div>
@@ -58,9 +58,29 @@ function App() {
 
         <div className="score"> Score: {score}</div>
         <table>
+          {board && board.map((row, i)=> (<Row key = {i} row={row}/>))}
         </table>
     </div>
   );
 }
 
 export default App;
+
+const Row = ({row}) => {
+  return <tr>
+    {row.map((cell, i) => <Cell key={i} cell={cell} />)}
+  </tr>
+}
+
+const Cell = ({cell}) => {
+  let color = 'Cell'
+  let value = (cell === 0) ? '' : cell
+  if (value) {
+    color += ` color-${value}`;
+  }
+  return <td>
+    <div className={color} >
+      <div className="number">{value} </div>
+    </div>
+  </td>
+}
